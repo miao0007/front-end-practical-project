@@ -26,3 +26,49 @@ text-align: center;
 background: rgba(255,200,100,0.8);
 }
 
+/* box container */
+
+#box {
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: -160px;
+    /* set keep 3d and position */
+    transform-style: preserve-3d;
+    transform-origin: 80px,80px, 0;
+    /* animation*/
+animation-name: animation;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 3s;
+}
+/* 1st face */
+#box .one {
+    transform: translateZ(80px);
+}
+
+/* 2nd face */
+#box .two {
+    transform: rotateY(90deg) translateZ(80px);
+}
+
+/* 3rd face */
+#box .three {
+    transform:rotateX(90deg) translateZ(80px);
+}
+
+/* 4th face  */
+#box .four {
+    transform: translateZ(-80px);
+}
+/* 5th face*/
+#box .five {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(80px);
+}
+
+/* 6th face*/
+#box .six {
+    transform: rotateX(-90deg) rotateZ(90deg) translateZ(80px);
+}
+
+
+
