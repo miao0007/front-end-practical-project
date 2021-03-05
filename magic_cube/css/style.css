@@ -1,0 +1,28 @@
+/* clear margin padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* set cube align to center */
+
+.container {
+    text-align: center;
+}
+
+/* 123456 for each side */
+#box section{
+position:absolute;
+width: 160px;
+height: 160px;
+border: 3px solid #000000;
+font-size: 130px;
+text-align: center;
+background: rgba(255,200,100,0.8);
+}
+
