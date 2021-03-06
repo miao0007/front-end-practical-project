@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+.nav {
+    width: 210px;
+    border-bottom: solid 1px #316a91;
+    margin: 40px auto 40px auto;
+}
+
+.nav ul>li {
+    border: solid 1px #316a91;
+}
+
+.nav ul li {
+    border-bottom: 0;
+}
+
+.nav ul li a {
+    padding-left: 30px;
+    color: black;
+    font-size: 12px;
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+}
+
+.nav ul li .inactive {
+    background: url(../images/down.png) no-repeat;
+    background-size: 10px 10px;
+    background-position: 190px center;
+}
+
+.nav ul li .inactives {
+    background: url(../images/up.png) no-repeat;
+    background-size: 10px 10px;
+    background-position: 190px center;
+}
+
+.nav ul li ul {
+    display: none;
+}
+
+.nav ul li ul li {
+    border: none;
+    border-left: 0;
+    border-right: 0;
+    border-color: #467ca2;
+}
+
+.nav ul li ul li ul {
+    display: none;
+}
+
+.nav ul li ul li a {
+    padding-left: 40px;
+}
+
+.nav ul li ul li a:hover {
+    background-color: #d6e6f1;
+}
+
+.nav ul li ul li ul li {
+    border-color:  #6196bb;
+}
+
+.last {
+    border-color: #6196bb;
+}
+
+.nav ul li ul li ul li a {
+    padding-left: 50px;
+}
+
+.first_nav_one {
+    background: url(../images/email.png) no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px 10px;
+}
+
+.first_nav_two {
+    background: url(../images/more.png) no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px 10px;
+}
+
+.first_nav_three {
+    background: url(../images/setting.png) no-repeat;
+    background-size: 15px 15px;
+    background-position: 10px 10px;
+}
