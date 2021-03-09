@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Member Register Form</Form></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="contact">
+        <form action="" method="post" name="form_one">
+            <ul>
+                <li>
+                    <label for="name">Name: </label>
+                    <!-- required for must be filled -->
+                    <!-- onblur: Execute a JavaScript when a user leaves an input field -->
+                  <input type="text" name="name" id="name" placeholder="Enter Your User Name" onblur="checkName()" required>
+                  <span class="tips" id="divname">1~12 characters</span>  
+                </li>
+                <li>
+                    <label for="password">Password: </label>
+                    <input type="text" name="password" id="password" placeholder="Enter Password" onblur="checkPassword()" required>
+                    <span class="tips" id="password1">Password Must contain number and Alphabet</span>
+                </li>
+                <li>
+                    <label for="confirm_pwd">Confirm Password</label>
+                    <input type="text" name="confirm_pwd" id="comfirm_pwd" placeholder="Please Confirm Password" onblur="confirmPassword()" required>
+                    <span class="tips" id="password2">Two Passwords need be matched</span>
+                </li>
+                <li>
+                    <label for="email">E-Mail: </label>
+                    <input type="text" name="email" id="email" placeholder="Enter Your Email" onblur="checkEmail()" required>
+                    <span class="tips" id="div_email"></span>
+
+                </li>
+
+            </ul>
+            <b class="btn">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </b>
+        </form>
+    </div>
+</body>
+</html>
