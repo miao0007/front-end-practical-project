@@ -1,0 +1,83 @@
+.body {
+    font: 14px/28px "微软雅黑"
+}
+
+.contact *:focus {
+    /* 伪类，对所有元素取消聚焦时高亮显示 */
+    outline: none;
+}
+
+.contact {
+    width: 700px;
+    height: auto;
+    background: #f6f6f6;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+.contact ul li {
+    /* 加了一条底部边框 */
+    border-bottom: 1px solid #dfdfdf;
+    /* 取消列表样式 */
+    list-style: none;
+    padding: 12px;
+}
+
+.contact ul li label {
+    width: 120px;
+    display: inline-block;
+    float: left;
+}
+
+.contact ul li input[type=text],
+.contact ul li input[type=password] {
+    width: 220px;
+    height: 25px;
+    border: 1px solid #aaa;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+/* 伪类设置input聚焦时的边框 */
+.contact ul li input:focus {
+    border-color: #c00;
+}
+
+.contact ul li input[type=text] {
+    transition: padding .25s;
+    -o-transition: padding .25s;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+}
+
+/* 要过渡的属性为padding，文本框内边距增加到70px,过渡时间为0.25s */
+.contact ul li input[type=password] {
+    transition: padding .25s;
+    -o-transition: padding .25s;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+}
+
+/* 获得焦点时，文本框右边框加大到70px,实现长度动态增长 */
+.contact ul li input:focus {
+    padding-right: 70px;
+}
+
+/* 按钮相对父级元素的左侧距离为300px */
+.btn {
+    position: relative;
+    left: 300px;
+}
+
+.tips {
+    color: rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+}
+
+.tips_true {
+    color: green;
+}
+
+.tips_false {
+    color: red;
+}
