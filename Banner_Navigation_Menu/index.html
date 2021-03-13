@@ -1,71 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Banner Navigation Menu</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <div class="main" id="main">
-        <div class="banner" id="banner">
-            <a href="###">
-                <div class="banner-slide slide1 slide_active"></div>
-            </a>
-            <a href="###">
-                <div class="banner-slide slide2"></div>
-            </a>
-            <a href="###">
-                <div class="banner-slide slide3"></div>
-            </a>
+      <div class="banner" id="banner">
+        <a href="###">
+          <div class="banner-slide slide1 slide_active"></div>
+        </a>
+        <a href="###">
+          <div class="banner-slide slide2"></div>
+        </a>
+        <a href="###">
+          <div class="banner-slide slide3"></div>
+        </a>
+      </div>
+      <!-- up down button -->
+      <a href="javascript:void(0)" class="button prev" id="prev"></a>
+      <a href="javascript:void(0)" class="button next" id="next"></a>
+
+      <!-- dot -->
+      <div class="dots" id="dots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-box"></div>
+
+      <!-- Main Menu -->
+      <div class="menu-content" id="menu-content">
+        <div class="menu-item">
+          <a href="###">
+            <span>Mobile Phone, Parts</span>
+            <i class="icon">&#xe665;</i>
+          </a>
         </div>
-        <!-- up down button -->
-        <a href="javascript:void(0)" class="button prev" id="prev"></a>
-        <a href="javascript:void(0)" class="button next" id="next"></a>
+        <div class="menu-item">
+          <a href="###">
+            <span>Computer</span>
+            <i class="icon">&#xe665;</i>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="###">
+            <span>Appliance</span>
+            <i class="icon">&#xe665;</i>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="###">
+            <span>Furniture</span>
+            <i class="icon">&#xe665;</i>
+          </a>
+        </div>
+      </div>
 
-        <!-- dot -->
-        <div class="dots" id="dots">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
+      <!-- Sub-Menu -->
+      <div class="sub-menu hide" id="sub-menu">
+        <!-- Mobile phone -->
+        <div class="inner-box">
+          <div class="sub-inner-box">
+            <div class="title">Mobile Phone, Parts</div>
+            <div class="sub-row">
+              <span>Mobile Communication</span>
+              <a href="#">Mobile phone</a>
+              <span>/</span>
+              <a href="#">Game</a>
+              <span>/</span>
+              <a href="#">5G</a>
+              <span>/</span>
+              <a href="#">Photo</a>
+              <span>/</span>
+              <a href="#">Large Screen</a>
+              <span>/</span>
+              <a href="#">Senior</a>
+            </div>
+            <div class="sub-row">
+              <span>Mobile Parts: </span>
+              <a href="#">Mobile Case & Covers</a>
+              <span>/</span>
+              <a href="#">Protective Film</a>
+              <span>/</span>
+              <a href="#">Cable</a>
+              <span>/</span>
+              <a href="#">Memory Card</a>
+              <span>/</span>
+              <a href="#">Chargers</a>
+              <span>/</span>
+              <a href="#">Earphone</a>
+            </div>
+            <div class="sub-row">
+              <span>ISP: </span>
+              <a href="#">ADSL</a>
+              <span>/</span>
+              <a href="#">SIM Card</a>
+              <span>/</span>
+              <a href="#">Phone Fee</a>
+              <span>/</span>
+              <a href="#">Telstra</a>
+              <span>/</span>
+              <a href="#">Optus</a>
+              <span>/</span>
+              <a href="#">Vodafone</a>
+              <span>/</span>
+              <a href="#">TPG</a>
+            </div>
+          </div>
         </div>
 
-        <div class="menu-box">
+        <!-- Computer -->
+        <div class="inner-box">
+          <div class="sub-inner-box">
+            <div class="title">Computer</div>
+            <div class="sub-row">
+              <span>Computer: </span>
+              <a href="#">Laptop</a>
+              <span>/</span>
+              <a href="#">Game Laptop</a>
+              <span>/</span>
+<a href="#">Pad</a>
+<span>/</span>
+<a href="#">Desktop</a>
 
+            </div>
+            <div class="sub-row">
+              <span>Computer Parts</span>
+              <a href="#">Monitor</a>
+              <span>/</span>
+              <a href="#">CPU</a>
+              <span>/</span>
+              <a href="#">Display Card</a>
+              <span>/</span>
+              <a href="#">Hard Drive</a>
+              <span>/</span>
+              <a href="#">Memory Card</a>
+              <span>/</span>
+              <a href="#">Computer Case</a>
+              <span>/</span>
+              <a href="#">Power Supplies</a>
+            </div>
+            <div class="sub-row">
+              <span>Accessories</span>
+              <a href="#">Mouse</a>
+              <span>/</span>
+              <a href="#">Keyboard</a>
+              <span>/</span>
+              <a href="#">U Disk</a>
+              <span>/</span>
+              <a href="#">Portable Drive</a>
+              <span>/</span>
+              <a href="#">Mouse Pad</a>
+              <span>/</span>
+              <a href="#">Camera</a>
+              <span>/</span>
+              <a href="#">Sound System</a>
+              <span>/</span>
+              <a href="#">Earphone</a>
+            </div>
+          </div>
         </div>
-
-        <!-- Main Menu -->
-        <div class="menu-content" id="menu-content">
-            <div class="menu-item">
-                <a href="###">
-                    <span>Mobile Phone, Parts</span>
-                    <i class="icon">&#xe665;</i>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="###">
-                    <span>Computer</span>
-                    <i class="icon">&#xe665;</i>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="###">
-                    <span>Appliance</span>
-                    <i class="icon">&#xe665;</i>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="###">
-                    <span>Furniture</span>
-                    <i class="icon">&#xe665;</i>
-                </a>
-            </div>
-        </div>
-
-        <!-- Sub-Menu -->
-        
+        <!-- Appliances -->
+        <div class="inner-box">
+          <div class="sub-inner-box">
+              <div class="title">Appliances</div>
+              <div class="sub-row">
+                  <span>TV：</span>
+                  <a href="#">LED</a>
+                  <span>/</span>
+                
+                  <a href="#">LCD</a>
+                  <span>/</span>
+                  <a href="#">QLED TV</a>
+                  <span>/</span>
+                  <a href="#">Smart TV</a>
+                  <span>/</span>
+                  <a href="#">4K</a>
+              </div>
+              <div class="sub-row">
+                  <span>Air Conditioner：</span>
+                  <a href="#">Portable</a>
+                  <span>/</span>
+                  <a href="#">Evaporative</a>
+                  <span>/</span>
+                  <a href="#">Central</a>
+                  <span>/</span>
+                  <a href="#">Hand Free</a>
+                  <span>/</span>
+                  <a href="#">Accessories</a>
+              </div>
+              <div class="sub-row">
+                  <span>Washing Machine：</span>
+                  <a href="#">Top Load</a>
+                  <span>/</span>
+                  <a href="#">Mini Portable</a>
+                  <span>/</span>
+                  <a href="#">Front Load</a>
+                  <span>/</span>
+                  <a href="#">Dryer</a>
+                  <span>/</span>
+                  <a href="#">Accessories</a>
+              </div>
+              <div class="sub-row">
+                  <span>Refrigerator：</span>
+                  <a href="#">Mini Bar & Portable</a>
+                  <span>/</span>
+                  <a href="#">Single Door</a>
+                  <span>/</span>
+                  <a href="#">Double Door</a>
+                  <span>/</span>
+                  <a href="#">Triple Door</a>
+                  <span>/</span>
+                  <a href="#">Freezer</a>
+              </div>
+              <div class="sub-row">
+                  <span>Household Appliances：</span>
+                  <a href="#">Fan</a>
+                  <span>/</span>
+                  <a href="#">Cold Fan</a>
+                  <span>/</span>
+                  <a href="#">Air Purifier</a>
+                  <span>/</span>
+                  <a href="#">Vacuum Cleaner</a>
+                  <span>/</span>
+                  <a href="#">Water Cooler</a>
+                  <span>/</span>
+                  <a href="#">Humidifier</a>
+              </div>
+          </div>
+      </div>
+      </div>
     </div>
- <script src="./js/index.js"></script>   
-</body>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
