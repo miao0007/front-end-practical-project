@@ -139,14 +139,14 @@ background: #fff;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
-/* @font-face {
+@font-face {
     font-family: "iconfont";
     src: url("../img/font/iconfont.eot");
     src: url("../img/font/iconfont.eot") format("embedded-opentype"),
         url("../img/font/iconfont.woff") format("woff"),
         url("../img/font/iconfont.tff") format("truetype"),
         url("../img/font/iconfont.svg#iconfog") format("svg");
-} */
+}
 
 .menu-item i {
     position: absolute;
@@ -190,9 +190,9 @@ background: #fff;
     font-weight: bold;
 }
 
-/* .hide {
+.hide {
     display: none;
-} */
+}
 
 .sub-row {
     margin: 15px 0;
