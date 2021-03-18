@@ -11,8 +11,40 @@
             height: 100px;
             background-color: #f00;
             /* after starting absolute position, we can control element's position by setting top/right/left/bottom */
+            position: absolute;
         }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #f0f;
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+
     </style>
+    <script type="text/javascript">
+
+    document.onmouseover = function(event){
+        // IE8, get event attribute from window object
+        event = event || window.event;
+        // get mouse coordinates
+        var left = event.clientX;
+        var top = event.clientY;
+        console.log(left,top);
+
+        // fetch scroll bar's width and height
+    // document.body is combine model
+    // document.documentElement is standard model
+    var scroll_top = document.body.scrollTop || document.documentElement.scrollTop;
+    var scroll_left = document.body.scrollLeft || document.documentElement.scrollLeft;
+
+    box1.style.left = left + scroll_left + "px";
+    box1.style.top = top + scroll_top + "px";
+    }
+
+    </script>
 </head>
 <body>
    <div id="box1"></div> 
