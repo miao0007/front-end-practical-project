@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Centralize</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+.box1 {
+    height: 400px;
+    min-width: 1000px;
+    background-image: url("./image/top_aec1ab4.jpg");
+    background-position: center -81px;
+}
+.box2 {
+    overflow: hidden;
+}
+
+.box2 img{
+position: relative;
+transform: translate(-50%);
+margin-left: 50%;
+}
+
+    </style>
+</head>
+<body>
+   <div class="box1"></div>
+   <div class="box2">
+       <img src="http://res.xyq.netease.com/pc/zt/20151119153357/images/top_aec1ab4.jpg" alt="image2">
+   </div> 
+</body>
+</html>
