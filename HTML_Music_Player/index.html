@@ -13,6 +13,60 @@
 </head>
 
 <body>
+<div class="wrapper">
+    <div class="bg-artwork"></div>
+    <div class="bg-layer"></div>
+    <div class="player">
+        <!-- album track section -->
+        <div class="player-track">
+            <div id="album-name"></div>
+            <div class="track-name"></div>
+            <div id="track-time">
+                <div id="current-time" class="left"></div>
+                <div id="track-length" class="right"></div>
+            </div>
+            <div id="s-area">
+                <!-- time display -->
+                <div id="ins-time"></div>
+                <div id="s-hover"></div>
+                <div id="seek-bar"></div>
+            </div>
+        </div>
+        <!-- album track section end -->
+        <!-- control panel section begin -->
+        <div class="player-content">
+            <!-- album section begin -->
+            <div class="album-art">
+                <img src="./images/1.jpg" alt="pic1" id="_1" class="active">
+                <img src="./images/2.jpg" alt="pic2" id="_2">
+                <img src="./images/3.jpg" alt="pic3" id="_3">
+                <img src="./images/4.jpg" alt="pic4" id="_4">
+                <img src="./images/5.jpg" alt="pic5" id="_5">
+                <div id="buffer-box">Loading...</div>
+            </div>
+            <!-- button section begin -->
+            <div class="player-controls">
+                <div class="control">
+                    <div class="button" id="pre">
+                        <i class="fas fa-backward"></i>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="button" id="pause">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="button" id="next">
+                        <i class="fas fa-forward"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- button section end -->
+        </div>
+        <!-- control panel end -->
+    </div>
+</div>
     <script type = "text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
