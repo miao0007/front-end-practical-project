@@ -37,7 +37,23 @@ i = playPauseButton.find('i'),
 playPreviousButton = $('#pre'),
 playNextButton = $('#next'),
 currentIndex = -1;
-
+function playPause() {
+    setTimeout(function() {
+        if(audio.paused){
+            console.log('Start Playing...');
+            playerTrack.addClass('active');
+            albumArt.addClass('active');
+            i.attr('class', 'fas fa-pause');
+            audio.play();
+        } else {
+            console.log('Paused');
+            playerTrack.removeClass('active');
+            albumArt.removeClass('active');
+            i.attr('class', 'fas fa-play');
+            audio.pause();
+        }
+    }, 300);
+}
 
     }
 )
