@@ -55,5 +55,36 @@ function playPause() {
     }, 300);
 }
 
+function showHover(event) {
+    seekBarPos = sArea.offset();
+
+    seekT = event.clientX - seekBarPos.left;
+    seekLoc = audio.duration * (seekT / sArea.outerWidth());
+
+    sHover.width(seekT);
+
+    ctMinutes = Math.floor(seekLoc / 60);
+    ctSeconds = Math.floor(seekLoc%60);
+    console.log(ctMinutes, ctSeconds);
+
+    if(ctMinutes < 10) {
+        ctMinutes = '0' + ctMinutes;
+    }
+    if(ctSeconds < 10) {
+        ctSeconds = '0' + ctSeconds;
+    }
+
+    if(isNaN(ctMinutes) || isNaN(ctSeconds)) {
+        insTime.text('--:--');
+    } else {
+        insTime.text(ctMinutes + ':' + ctSeconds);
+    }
+
+    insTime.css({
+        'left': seekT,
+        'margin-left': '-21px'
+    }).fadeIn(10);
+}
+
     }
 )
