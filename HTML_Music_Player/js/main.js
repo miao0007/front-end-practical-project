@@ -94,7 +94,11 @@ function hideHover() {
     }).fadeOut(0);
 }
 
-
+function playFromClickedPos(){
+    audio.currentTime = seekLoc;
+    seekBar.width(seekT);
+    hideHover();
+}
 
     }
 )
