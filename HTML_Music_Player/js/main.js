@@ -86,5 +86,15 @@ function showHover(event) {
     }).fadeIn(10);
 }
 
+function hideHover() {
+    sHover.width(0);
+
+    insTime.css({
+        'left': '0px'
+    }).fadeOut(0);
+}
+
+
+
     }
 )
