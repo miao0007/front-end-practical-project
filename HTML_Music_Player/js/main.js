@@ -100,5 +100,48 @@ function playFromClickedPos(){
     hideHover();
 }
 
+function updateCurrentTime() {
+
+    nTime = new Date();
+    nTime = nTime.getTime();
+
+    curMinutes = Math.floor(audio.currentTime / 60); //current minutes
+    curSeconds = Math.floor(audio.currentTime % 60); //current seconds
+
+    durMinutes = Math.floor(audio.duration /60); //total minutes
+    durSeconds = Math.floor(audio.duration % 60); //total seconds
+
+    playProgress = (audio.currentTime / audio.duration) * 100; //progress percentage
+
+    //0 if it is necessary
+
+    if(curMinutes < 10) curMinutes = '0' + curMinutes;
+    if (curSeconds < 10) curSeconds = '0' + curSeconds;
+    if(durMinutes < 10) durMinutes = '0' + durMinutes;
+    if(durSeconds < 10) durSeconds = '0' + durSeconds;
+
+    // audio.currentTime and audio.duration is NaN if music is not started yet
+
+    if (isNaN(curMinutes) || isNaN(curSeconds)) {
+        tProgress.text('00:00');
+    } else {
+        tProgress.text(curMinutes + ':' + curSeconds);
+    }
+
+    if(isNaN(durMinutes) || isNaN(durSeconds)) {
+        tTime.text('00:00');
+    } else {
+        tTime.text(durMinutes + ':' + durSeconds);
+    }
+
+    seekBar.width(playProgress + '%');
+
+    if(playProgress == 100) {
+        i.attr('class', 'fa fa-play');
+
+        tProgress.text('00:00');
+        albumArt.removeClass('buffering').removeClass('active');
+    }
+}
     }
 )
