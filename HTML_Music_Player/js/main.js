@@ -143,5 +143,59 @@ function updateCurrentTime() {
         albumArt.removeClass('buffering').removeClass('active');
     }
 }
+
+function selectTrack(flag) {
+    if(flag == 0 || flag == 1) {
+        if(currentIndex < albumArtworks.length-1) {
+            ++ currentIndex;
+        } else {
+            currentIndex = 0;
+        }
+    } else {
+        if (currentIndex > 0) {
+            --currentIndex;
+        } else {
+            currentIndex = albumArtworks.length - 1;
+        }
+    }
+    if((currentIndex > -1)&&(currentIndex < albumArtworks.length)) {
+        if(flag == 0) {
+            i.attr('class', 'fa fa-play');
+        } else {
+            albumArt.removeClass('buffering');
+            i.attr('class', 'fa fa-pause');
+        }
+
+        seekBar.width(0);
+        tProgress.text('00:00');
+        tTime.text('00:00');
+
+        currAlbum = albums[currentIndex];
+        currTrackName = trackNames[currentIndex];
+        currArtwork = albumArtworks[currentIndex];
+
+        audio.src = trackUrl[currentIndex];
+
+        if(flag != 0) {
+            audio.play();
+            playerTrack.addClass('active');
+            albumArt.addClass('active');
+        }
+
+        albumName.text(currAlbum);
+
+        trackName.text(currTrackName);
+        albumArt.find('img.active').removeClass('active');
+
+        $('#' + currArtwork).addClass('active');
+
+        bgArtworkUrl = $('#' + currArtwork).attr('src');
+        bgArtwork.css({
+            'background': 'url(' + bgArtworkUrl + ')'
+        });
+    }
+}
+
+
     }
 )
