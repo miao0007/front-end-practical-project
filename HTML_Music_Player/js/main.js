@@ -196,6 +196,34 @@ function selectTrack(flag) {
     }
 }
 
+function initPlayer(){
+    audio = new Audio();
 
+    selectTrack(0);
+
+    audio.loop = false;
+
+    playPauseButton.on('click', playPause);
+
+    $(audio).on('timeupdate',updateCurrentTime);
+
+    sArea.mousemove(function(event){
+        showHover(event);
+    })
+
+    sArea.mouseout(hideHover);
+
+    sArea.on('click', playFromClickedPos);
+
+    playPreviousButton.on('click', function(){
+        selectTrack(-1);
+    });
+
+    playNextButton.on('click', function(){
+        selectTrack(1);
+    })
+    console.log('initiate player successfully')
+}
+initPlayer();
     }
 )
